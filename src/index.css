@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@theme {
+  /* Colors - Midnight & Gold Dark Theme */
+  --color-primary: #fbbf24;
+  --color-primary-dark: #d97706;
+  --color-secondary: #1A1A2E;
+  --color-accent: #fbbf24;
+  --color-background: #0f172a;
+  --color-surface: #1e293b;
+  --color-surface-light: #334155;
+  --color-text-primary: #f8fafc;
+  --color-text-secondary: #94a3b8;
+  --color-success: #22c55e;
+  --color-error: #ef4444;
+  --color-whatsapp: #25D366;
+  --color-pending: #f59e0b;
+  
+  /* Typography */
+  --font-heading: 'Nunito', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-background);
+  color: var(--color-text-primary);
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.font-mono {
+  font-family: var(--font-mono);
+}
+
+/* Touch target helpers */
+.touch-manipulation {
+  touch-action: manipulation;
+}
+
+/* Prevent iOS zoom on inputs */
+@media screen and (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px;
+  }
+}
+
+/* Custom scrollbar for dark theme */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-surface);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-surface-light);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-secondary);
+}
